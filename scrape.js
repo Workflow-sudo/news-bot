@@ -1,9 +1,8 @@
-import { chromium } from "playwright-core";
+import puppeteer from "puppeteer";
 
 export default async function scrape() {
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath: "/usr/bin/chromium-browser",
+  const browser = await puppeteer.launch({
+    headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
 
