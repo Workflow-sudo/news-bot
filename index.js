@@ -9,6 +9,7 @@ const MAX = Number(process.env.MAX_ARTICLES || 5);
 
 export default async function run() {
   console.log("RUN START");
+
   const articles = await scrape();
   const chosen = articles.slice(0, MAX);
 
